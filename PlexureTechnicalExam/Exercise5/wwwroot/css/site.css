@@ -195,6 +195,81 @@ body {
     border:thin;
 }
 
+@media only screen
+    and (min-width: 767px)
+    and (max-width: 998px){
+        .interest-rate-text{
+            margin-right:30px;
+        }
+        .interest-rate-value {
+            margin-left: 30px;
+        }
+
+        .interest-rate-text-ten {
+            margin-right: 30px;
+        }
+
+        .interest-rate-value-ten {
+            margin-left: 30px;
+        }
+
+        .interest-rate-text-15 {
+            margin-right: 30px;
+        }
+
+        .interest-rate-value-15 {
+            margin-left: 30px;
+        }
+}
+
+@media only screen and (max-width: 575px){
+    .loan-option-header {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 991px) {
+    .interest-rate-text {
+        margin-right: 30px;
+        font-size:10px !important;
+    }
+    .interest-rate-value {
+        margin-left: 29px;
+    }
+    .interest-rate-text-ten {
+        margin-right: 25px;
+    }
+
+    .interest-rate-value-ten {
+        margin-left: 29px;
+    }
+    .interest-rate-text-15 {
+        margin-right: 25px;
+    }
+
+    .interest-rate-value-15 {
+        margin-left: 29px;
+    }
+
+    .ltv-text {
+        margin-right: 30px;
+    }
+    .ltv-value{
+        margin-left: 30px;
+        font-size:7px !important;
+    }
+
+    .last-row-cell{
+        font-size: 6px !important;
+    }
+    .loan-option-header{
+        font-size: 23px;
+    }
+    .property-kind-drop-down-button{
+        font-size:7px !important;
+    }
+}
+
 .interest-rate-text {
     padding-top: 15px;
     font-size: 12px;
@@ -320,4 +395,8 @@ body {
     padding-top: 15px;
     padding-right: 10px;
     padding-left: 10px;
+}
+
+.bottom{
+    margin-bottom:10px;
 }
