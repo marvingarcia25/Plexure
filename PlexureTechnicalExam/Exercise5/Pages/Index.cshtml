@@ -1,0 +1,94 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+<div class="container">
+    <div class="row row-cols-2">
+
+        @* Left side bar *@
+        <div class="col-sm-3">
+            <div class="row side-bar-head">
+                <div class="side-bar-head-text padded">
+                    COMMERCIAL REAL ESTATE <br />
+                    QOUTE TOOL
+                </div>
+            </div>
+            <div class="row">
+                <div class=" drop-down-title ">
+                    What kind of property do you have?
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="dropdown flatmenu property-kind-drop-down">
+                    <button class="btn btn-outline-secondary property-kind-drop-down-button btn-sm btn-block chrome dropdown-toggle text-justify" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Multi-Family
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" drop-down-title ">
+                    How much is it worth?
+                </div>
+            </div>
+            <div class="row">
+                <div class="dropdown property-kind-drop-down">
+                    <button class="btn btn-outline-secondary property-kind-drop-down-button btn-sm btn-block chrome dropdown-toggle text-justify" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        $5,000,000 - $10,000,000
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" drop-down-title ">
+                    How much would you like to borrow?
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-amount-box">
+                    <input type="text" class="input-borrow-amount form-control btn-block">
+                 </div>
+            </div>
+            <div class="row">
+                <div class=" drop-down-title ">
+                    What's the property's annual income?
+                </div>
+            </div>
+            <div class="row">
+                <div class="dropdown property-kind-drop-down">
+                    <button class="btn btn-outline-secondary property-kind-drop-down-button btn-sm btn-block chrome dropdown-toggle text-justify" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        $5,000,000 - $10,000,000
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="start-over-button">
+                    <button type="button" class="btn btn-light">START OVER</button>
+                </div>
+           
+            </div>
+
+        </div>
+
+        <div class="col-sm-9">
+            test33
+        </div>
+    </div>
+</div>
