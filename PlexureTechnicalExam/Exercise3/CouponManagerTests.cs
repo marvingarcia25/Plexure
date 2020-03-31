@@ -94,14 +94,39 @@ namespace Exercise3
             var fakeFuncs = A.CollectionOfFake<Func<Coupon, Guid, bool>>(10);
             //Assuming a coupon is found
             A.CallTo(() => _fakeCouponProvider.Retrieve(Guid.NewGuid())).WithAnyArguments().Returns<Coupon>(new Coupon());
-
-      
+            
+            foreach(var fakeFunc in fakeFuncs)
+            {
+                //Assuming all the evaluators resulted to false
+                A.CallTo(() => fakeFunc.Invoke(new Coupon(), Guid.NewGuid())).Returns(false);
+            }
             //Act
             var couponManager = new CouponManager(_fakeLogger, _fakeCouponProvider);
             var result = await couponManager.CanRedeemCoupon(Guid.NewGuid(), Guid.NewGuid(), fakeFuncs.AsEnumerable());
 
             //Assert
             Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public async Task WithCouponAndPassingEvaluation()
+        {
+            //Arrange
+            var fakeFuncs = A.CollectionOfFake<Func<Coupon, Guid, bool>>(10);
+            //Assuming a coupon is found
+            A.CallTo(() => _fakeCouponProvider.Retrieve(Guid.NewGuid())).WithAnyArguments().Returns<Coupon>(new Coupon());
+
+            foreach (var fakeFunc in fakeFuncs)
+            {
+                //Assumming all the evaluators returned true
+                A.CallTo(() => fakeFunc.Invoke(new Coupon(), Guid.NewGuid())).WithAnyArguments().Returns(true);
+            }
+            //Act
+            var couponManager = new CouponManager(_fakeLogger, _fakeCouponProvider);
+            var result = await couponManager.CanRedeemCoupon(Guid.NewGuid(), Guid.NewGuid(), fakeFuncs.AsEnumerable());
+
+            //Assert
+            Assert.IsTrue(result);
         }
     }
 }
